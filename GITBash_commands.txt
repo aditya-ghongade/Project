@@ -1,0 +1,597 @@
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project
+$ git init
+Initialized empty Git repository in D:/Work/Persistent/Project/.git/
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git add File.txt
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File.txt
+
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git commit -m "WI1: File created, hello world"
+[master (root-commit) 6064ecb] WI1: File created, hello world
+ 1 file changed, 1 insertion(+)
+ create mode 100644 File.txt
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git add .
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File.txt
+
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git commit -m "WI1:File updated with change to tracked file"
+[master 7782f33] WI1:File updated with change to tracked file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git commit -am "WI1:file updated, added dots at the end of hello world"
+[master 6433d12] WI1:file updated, added dots at the end of hello world
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log
+commit 6433d124b2122db0bd74fe7c5dbbaf66703e1be4 (HEAD -> master)
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:49:30 2021 +0530
+
+    WI1:file updated, added dots at the end of hello world
+
+commit 7782f33b939b651c084ada746f189fe6eeb6010d
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:47:20 2021 +0530
+
+    WI1:File updated with change to tracked file
+
+commit 6064ecbd2e193c235900ea7e9e854264416278c9
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:42:30 2021 +0530
+
+    WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log -2
+commit 6433d124b2122db0bd74fe7c5dbbaf66703e1be4 (HEAD -> master)
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:49:30 2021 +0530
+
+    WI1:file updated, added dots at the end of hello world
+
+commit 7782f33b939b651c084ada746f189fe6eeb6010d
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:47:20 2021 +0530
+
+    WI1:File updated with change to tracked file
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+6433d12 (HEAD -> master) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline -2
+6433d12 (HEAD -> master) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --author="Aditya"
+commit 6433d124b2122db0bd74fe7c5dbbaf66703e1be4 (HEAD -> master)
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:49:30 2021 +0530
+
+    WI1:file updated, added dots at the end of hello world
+
+commit 7782f33b939b651c084ada746f189fe6eeb6010d
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:47:20 2021 +0530
+
+    WI1:File updated with change to tracked file
+
+commit 6064ecbd2e193c235900ea7e9e854264416278c9
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:42:30 2021 +0530
+
+    WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --author="Aditya" --oneline
+6433d12 (HEAD -> master) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --since="02/03/2021"
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --since="02/02/2021"
+commit 6433d124b2122db0bd74fe7c5dbbaf66703e1be4 (HEAD -> master)
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:49:30 2021 +0530
+
+    WI1:file updated, added dots at the end of hello world
+
+commit 7782f33b939b651c084ada746f189fe6eeb6010d
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:47:20 2021 +0530
+
+    WI1:File updated with change to tracked file
+
+commit 6064ecbd2e193c235900ea7e9e854264416278c9
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:42:30 2021 +0530
+
+    WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --until="02/03/2021"
+commit 6433d124b2122db0bd74fe7c5dbbaf66703e1be4 (HEAD -> master)
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:49:30 2021 +0530
+
+    WI1:file updated, added dots at the end of hello world
+
+commit 7782f33b939b651c084ada746f189fe6eeb6010d
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:47:20 2021 +0530
+
+    WI1:File updated with change to tracked file
+
+commit 6064ecbd2e193c235900ea7e9e854264416278c9
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:42:30 2021 +0530
+
+    WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --grep="WI1"
+commit 6433d124b2122db0bd74fe7c5dbbaf66703e1be4 (HEAD -> master)
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:49:30 2021 +0530
+
+    WI1:file updated, added dots at the end of hello world
+
+commit 7782f33b939b651c084ada746f189fe6eeb6010d
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:47:20 2021 +0530
+
+    WI1:File updated with change to tracked file
+
+commit 6064ecbd2e193c235900ea7e9e854264416278c9
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:42:30 2021 +0530
+
+    WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --grep="world"
+commit 6433d124b2122db0bd74fe7c5dbbaf66703e1be4 (HEAD -> master)
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:49:30 2021 +0530
+
+    WI1:file updated, added dots at the end of hello world
+
+commit 6064ecbd2e193c235900ea7e9e854264416278c9
+Author: Aditya <aditya_ghongade@persistent.com>
+Date:   Wed Feb 3 12:42:30 2021 +0530
+
+    WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --help
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git diff
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git diff
+diff --git a/File.txt b/File.txt
+index bf01457..c4e3ac2 100644
+--- a/File.txt
++++ b/File.txt
+@@ -1,2 +1,3 @@
+ Hello World.....
++fd
+ Change to check modification in tracked file
+\ No newline at end of file
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class
+        .exe
+        .jar
+        New Text Document.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class
+        .exe
+        .gitignore
+        .jar
+        New Text Document.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        New Text Document.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git add .
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   File.txt
+
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git commit -am "WI2 : File updated with random text"
+[master 02b253c] WI2 : File updated with random text
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+02b253c (HEAD -> master) WI2 : File updated with random text
+6433d12 WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FileToBeDeleted.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git add .
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git commit -m "WI3 : FileToBeDeleted has been added to test file event tracking"
+[master 0cf56c9] WI3 : FileToBeDeleted has been added to test file event tracking
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 FileToBeDeleted.txt
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    FileToBeDeleted.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git rm FileToBeDeleted.txt
+rm 'FileToBeDeleted.txt'
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    FileToBeDeleted.txt
+
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git commit -m "WI3:FileToBeDeleted Removed due to......."
+[master 6b84838] WI3:FileToBeDeleted Removed due to.......
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 FileToBeDeleted.txt
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+6b84838 (HEAD -> master) WI3:FileToBeDeleted Removed due to.......
+0cf56c9 WI3 : FileToBeDeleted has been added to test file event tracking
+02b253c WI2 : File updated with random text
+6433d12 WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git checkout ^C
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git checkout 02b253c
+Note: switching to '02b253c'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 02b253c WI2 : File updated with random text
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project ((02b253c...))
+$ git log --oneline
+02b253c (HEAD) WI2 : File updated with random text
+6433d12 WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project ((02b253c...))
+$ git checkout master
+Previous HEAD position was 02b253c WI2 : File updated with random text
+Switched to branch 'master'
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+6b84838 (HEAD -> master) WI3:FileToBeDeleted Removed due to.......
+0cf56c9 WI3 : FileToBeDeleted has been added to test file event tracking
+02b253c WI2 : File updated with random text
+6433d12 WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git tag V1.1
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+6b84838 (HEAD -> master, tag: V1.1) WI3:FileToBeDeleted Removed due to.......
+0cf56c9 WI3 : FileToBeDeleted has been added to test file event tracking
+02b253c WI2 : File updated with random text
+6433d12 WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git tag V1.0 6433d12
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+6b84838 (HEAD -> master, tag: V1.1) WI3:FileToBeDeleted Removed due to.......
+0cf56c9 WI3 : FileToBeDeleted has been added to test file event tracking
+02b253c WI2 : File updated with random text
+6433d12 (tag: V1.0) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git tag
+V1.0
+V1.1
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+6b84838 (HEAD -> master, tag: V1.1) WI3:FileToBeDeleted Removed due to.......
+0cf56c9 WI3 : FileToBeDeleted has been added to test file event tracking
+02b253c WI2 : File updated with random text
+6433d12 (tag: V1.0) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git checkout V1.0
+Note: switching to 'V1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6433d12 WI1:file updated, added dots at the end of hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project ((V1.0))
+$ git log --oneline
+6433d12 (HEAD, tag: V1.0) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project ((V1.0))
+$ git checkout master
+Previous HEAD position was 6433d12 WI1:file updated, added dots at the end of hello world
+Switched to branch 'master'
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git diff
+diff --git a/File.txt b/File.txt
+index c4e3ac2..3c3bdc7 100644
+--- a/File.txt
++++ b/File.txt
+@@ -1,3 +1,3 @@
+ Hello World.....
+-fd
+-Change to check modification in tracked file
+\ No newline at end of file
++fdcgchchg
++Change to check modification in trachvvvhjked file
+\ No newline at end of file
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git restore -- File.txt
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+6b84838 (HEAD -> master, tag: V1.1) WI3:FileToBeDeleted Removed due to.......
+0cf56c9 WI3 : FileToBeDeleted has been added to test file event tracking
+02b253c WI2 : File updated with random text
+6433d12 (tag: V1.0) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git revert 6b84838
+[master c58265d] Revert "WI3:FileToBeDeleted Removed due to......."
+                                                                    1 file changed, 0 insertions
+(+), 0 deletions(-)
+                    create mode 100644 FileToBeDeleted.txt
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git log --oneline
+c58265d (HEAD -> master) Revert "WI3:FileToBeDeleted Removed due to......."
+6b84838 (tag: V1.1) WI3:FileToBeDeleted Removed due to.......
+0cf56c9 WI3 : FileToBeDeleted has been added to test file event tracking
+02b253c WI2 : File updated with random text
+6433d12 (tag: V1.0) WI1:file updated, added dots at the end of hello world
+7782f33 WI1:File updated with change to tracked file
+6064ecb WI1: File created, hello world
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$ git config core.editor notepad
+
+ViRuLAPTOP-623F7V8B MINGW64 /d/Work/Persistent/Project (master)
+$
