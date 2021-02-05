@@ -6,4 +6,4 @@ change 3 :-> to test push in github.
 
 change 4 :-> to test pull operation from remote to local.
 
-change 5 :-> Change for Bug3 on remote master by team mate to test rebase.
+change 5 :-> local master to test rebase for CR2.
